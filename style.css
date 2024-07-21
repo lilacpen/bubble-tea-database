@@ -1,0 +1,223 @@
+/*general*/
+
+    body {
+        background: linear-gradient(to right, #F1EEE0 0%, #F1EEE0 30vmax, #E8D2BB 30vmax,
+    #E8D2BB 100vmax);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #FFFFFF;
+        display: grid;
+        font-family: Courier;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .button {
+        background-color: rgba(255,255,255, 0.65);
+        border:5px solid #E1B280;
+        color: #B2793D;
+        cursor: pointer;
+        font: 1.2vmax Courier;
+        padding: 5px;
+        position: fixed;
+        text-align: center;
+        top: 30vmin;
+    }
+
+    .button:hover{
+        background-color: #FCEAD4;
+        border-color: #B2793D;
+        border-radius: 10px;
+        color: #B2793D;
+        padding: 7px;
+    }
+
+    .one {
+        left: 4vmax;
+    }
+
+    .two {
+        left: 11vmax;
+    }
+
+    .three {
+        left: 19vmax;
+    }
+
+    p {
+        color: #B2793D;
+        font: 1.3vmax Courier;
+        left: 4.4vmax;
+        position: fixed;
+        text-align: center;
+        top: 17em;
+        width: 22vmax;
+    }
+    
+    .title {
+        background: none;
+        border: none;
+        color: #E1B280;
+        font: 5vmax Courier;
+        padding: 10px;
+        position: fixed;
+        text-align: center;
+        text-shadow: 0.05em 0.01em #B2793D;
+        top: 10vmin;
+    }
+    
+    
+    
+    
+/*main.html*/
+    .maintitle {
+        left: 2.2vmax;
+    }
+    
+    #maintable {
+        border-style: none;
+        height: 100px;
+        left: 35%;
+        position: relative;
+        top:3vmax;
+        width: 60%;
+        border-collapse: collapse;
+    }
+    
+     table td {
+        border: 1px solid #B2793D;
+        padding: 6px;
+        text-align: center;
+      
+    }
+
+    td:nth-child(5) {
+        text-align: left;
+        width: 200px;
+    }
+      
+
+    tr:nth-child(even) {
+        background-color: rgba(241, 218, 194, 0.7);
+        color: #B2793D;
+    }
+
+    tr:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #B2793D;
+    }
+
+    table th {
+        border: 3px solid #B2793D;
+        color: #C48F55;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    .tableimg {
+        width: 70px;
+    }
+
+    #myInput {
+        position: relative;
+        font-family: Courier;
+        left: 37.5vmax;
+        width: 25%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: none;
+        margin-bottom: 12px;
+        top: 2vmin;
+    }
+    
+    textarea:focus, input:focus {
+        color: #C48F55;
+        border: none;
+        outline: none;
+    }
+    
+    #filter {
+        background-color: #FFFFFF;
+        position: relative;
+        font-family: Courier;
+        left: 38vmax;
+        width: 20%;
+        font-size: 16px;
+        top:2vmin;
+        padding: 12px 20px 12px 40px;
+        border: none;
+        margin-bottom: 12px;
+        color: #C48F55;
+    }
+
+    ::placeholder {
+        color: #B2793D;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .slidecontainer {
+        position: absolute;
+        right: 3vmax;
+        top:3.2vmin;
+    }
+    
+    
+/*charts.html*/
+    
+    .charttitle {
+        left: 5vmax;
+    }
+    
+    .chart {
+        border-radius: 10px;
+        height: 65vmin;
+        left: 40vmax;
+        position: relative;
+        top: 5vmin;
+        width: 93.4375vmin;
+    }
+
+    select {
+        background-color: rgba(255, 255, 255, 0.65);
+        border: 5px solid #E1B280;
+        color: #E1B280;
+        font: 20px Courier;
+        left: 40vmax;
+        padding: 5px;
+        position: relative;
+        top: 7vmin;
+        width: 200px;
+    }
+    
+    output {
+        color:#B2793D
+    }
+    
+    
+    
+/*gallery.html*/
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        left: 30vmax;
+        padding: 7px;
+        position: relative;
+        -ms-flex-wrap: wrap;
+    }
+    
+    .row img {
+      vertical-align: middle;
+      padding: 7px;
+      width: auto; 
+    }
+    
+    .gallerytitle {
+        left:3vmax;
+    }
