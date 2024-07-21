@@ -93,17 +93,6 @@ body {
         left: 2vmax;
     }
     
-    hr {
-        position: relative;
-        top:17vmax;
-        color: #FFFFFF;
-        width: 50vmax;
-        left:-22vmax;
-		background-color: #FFFFFF;
-		border-radius: 10px;
-		border: none;
-		height:10px;
-    }
     
     .list {
         position: relative;
