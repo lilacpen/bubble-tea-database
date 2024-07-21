@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bubble Tea</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  
+  <style>
+    body {
+      background: linear-gradient(to right, #F1EEE0 0%, #F1EEE0 30vmax, #E8D2BB 30vmax,
+    #E8D2BB 100vmax);
+      font-family: Courier;
+      color: #FFFFFF;
+      display: grid;
+    }
+    
+    .button {
+      background-color: rgba(255,255,255, 0.65);
+      font-family: Courier;
+      color: #B2793D;
+      border-color: #E1B280;
+      border-style: solid;
+      border-width: 5px;
+      padding: 5px;
+      font-size: 1.2vmax;
+      cursor: pointer;
+      text-align: center;
+      position: absolute;
+      top: 30vmin;
+      position: fixed;
+    }
+
+    .button:hover{
+      color: #B2793D;
+      border-color: #B2793D;
+      background-color: #FCEAD4;
+      border-radius: 10px;
+      padding: 7px;
+    }
+
+    .one {
+      left: 4vmax;
+    }
+
+    .two {
+      left: 11.5vmax;
+    }
+
+    .three {
+      left: 19vmax;
+    }
+    
+    .maintitle {
+      padding: 0;
+      border: none;
+      background: none;
+      color: #E1B280;
+      font-size: 5vmax;
+      position: fixed;
+      top: 10vmin;
+      left: 5vmax;
+      text-align: center;
+      font-family: Courier;
+      text-shadow: 0.05em 0.01em #B2793D;
+      padding: 10px;
+    }
+
+    .chart {
+      height: 65vmin;
+      width: 93.4375vmin;
+      border-radius: 10px;
+      position: relative;
+      top: 5vmin;
+      left: 40vmax;
+    }
+
+    select {
+      font-family: Courier;
+      font-size: 20px;
+      position: relative;
+      color: #E1B280;
+      border-color: #E1B280;
+      border-style: solid;
+      border-width: 5px;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.65);
+      width: 200px;
+      left: 40vmax;
+      top: 7vmin;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div>
+    <form action="index.html">
+      <button type="submit" class="button one">Home</button>
+    </form>
+    
+    <form action="main.html">
+      <button type="submit" class="button two">Main</button>
+    </form>
+
+    <form action="gallery.html">
+      <button type="submit" class="button three">Gallery</button>
+    </form>
+
+    <button type="submit" class="maintitle">Charts</button>
+
+  </div>
+
+  <img class="chart" src="http://tiny.cc/bbdb1" name="myImage"/>
+    <form method="" action="" name="myForm">
+        <select size="2" name="switch" onchange="switchImage();">
+          <option value="1">Shop Ratings</option>
+          <option value="2">Shop Prices</option>
+        </select>
+    </form>
+</body>
+</html>
