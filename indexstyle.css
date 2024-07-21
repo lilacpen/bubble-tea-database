@@ -1,0 +1,123 @@
+body {
+      background-color: #E8D2BB;
+      font-family: Courier;
+      color: #85592c;
+      display: grid;
+      background-image: url('https://wallpaperaccess.com/full/4706598.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 90vmin;
+      background-position: 100% 0vmax;
+      overflow-x: hidden;
+    }
+
+    .button {
+      background-color: rgba(255,255,255, 0.65);
+      font-family: Courier;
+      color: #B2793D;
+      border-color: #E1B280;
+      border-style: solid;
+      border-width: 5px;
+      padding: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      text-align: center;
+      position: fixed;
+      top: 55vmin;
+    }
+
+    .button:hover{
+      color: #B2793D;
+      border-color: #B2793D;
+      background-color: #FCEAD4;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .one {
+      left: 4.5vmax;
+    }
+
+    .two {
+      left: 20.6vmax;
+    }
+
+    .three {
+      left: 34.5vmax;
+    }
+
+    .maintitle {
+      border: none;
+      background: none;
+      color: #E1B280;
+      font-size: 5.5vmax;
+      position: relative;
+      top: 6vmax;
+      left: 2.5vmax;
+      text-align: center;
+      font-family: Courier;
+      text-shadow: 0.06em 0.01em #B2793D;
+    }
+
+    .maintitle:hover {
+      background-image: url('https://catchfire.carrd.co/assets/images/image12.gif?v77549432622351');
+      background-repeat: no-repeat;
+      background-size: auto 160%;
+      border-radius: 10px;
+      color: rgba(0, 0, 0, 0);
+      text-shadow: none;
+    }
+
+    .animation {
+      align-self: flex-end;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      transform-origin: bottom;
+    }
+    
+    .pixeldrink:hover {
+      animation-name: bounce;
+      animation-timing-function: ease;
+    }
+    
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0); }  
+      
+    }
+    
+    
+    h4 {
+        position: relative;
+        left: 2vmax;
+    }
+    
+    hr {
+        position: relative;
+        top:17vmax;
+        color: #FFFFFF;
+        width: 50vmax;
+        left:-22vmax;
+		background-color: #FFFFFF;
+		border-radius: 10px;
+		border: none;
+		height:10px;
+    }
+    
+    .list {
+        position: relative;
+        left: 30vmax;
+        top: -20%;
+        width: 25vmax;
+        height: 60px;
+        font-size: 20px;
+    }
+        
+    a {
+        color: #85592c;
+    }
+    
+    a:hover {
+        color: black;
+    }
