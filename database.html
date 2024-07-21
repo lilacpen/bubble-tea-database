@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bubble Tea</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div>
+    <button type="submit" class="title maintitle">Database</button>
+    
+    <p>Click on the headers (name, shop, rating, price) to sort from ascending or descending. You can only use one type of filter at a time (search/shop/rating).<br><br>The default view is ordered from most recent to earliest.</p>
+
+    <input type="text" id="myInput" onkeyup="tableFunction()" placeholder="Search for names.." title="Type in a name">
+    <select id="filter" onchange="filterFunction()" class='form-control' >
+        
+        <option value="">Filter by shop...</option>
+        <option>7 Leaves</option>
+        <option>Allmytea</option>
+        <option>Breaktime Tea</option>
+        <option>Bubble Tea Station Cafe</option>
+        <option>Happy Lemon</option>
+        <option>N7 Draft Tea</option>
+        <option>Pink Pink Tea Shoppe</option>
+        <option>R&B Tea</option>
+        <option>Sweet U</option>
+        <option>Teaspoon</option>
+        <option>Woof's Bar</option>
+        
+    </select>
+    
+    
+    <div class="slidecontainer">
+        <input type="range" id="rating" min="2" max="4" value="0" oninput="this.nextElementSibling.value = this.value" background-color=#B2793D onchange="ratingFunction()">
+        <output>Rating</output>
+    </div>
+
+    
+    <table id="maintable">
+    <tr>
+      <th onclick="sortTable(0)">Name</th>
+      <th onclick="sortTable(1)">Shop</th>
+      <th onclick="sortTable(2)">Rating</th>
+      <th onclick="sortTable(3)">Price</th>
+      <th>Details</th>
+      <th>Image</th>
+    </tr>
+    <tr>
+      <td>Grasshopper</td>
+      <td>Teaspoon</td>
+      <td>4.3</td>
+      <td>$6.75</td>
+      <td>• pretty sweet<br>• very cucumbery<br>• lychee popping boba tasted off<br> (less sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/4ro6vz"></td>
+    </tr>
+      
+    <tr>
+      <td>Thai Tea</td>
+      <td>Breaktime Tea</td>
+      <td>4.3</td>
+      <td>$6.20</td>
+      <td>• very saturated color<br>• not enough toppings<br>• not too sweet<br> (less sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/3um6vz"></td>
+    </tr>
+      
+    <tr>
+      <td>White Crystal</td>
+      <td>Teaspoon</td>
+      <td>4.5</td>
+      <td>$6.00</td>
+      <td>• light grape flavor <br> • not too sweet <br> • good with crystal boba <br> (75% sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/dum6vz"></td>
+    </tr>
+
+     <tr>
+      <td>Okinawa Fresh Milk</td>
+      <td>Happy Lemon</td>
+      <td>4.5</td>
+      <td>$6.00</td>
+      <td>• classic, pretty good <br> (100% sugar, 100% ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/ium6vz"></td>
+    </tr>
+
+    <tr>
+      <td>Guava Sunset</td>
+      <td>Teaspoon</td>
+      <td>4.5</td>
+      <td>$6.00</td>
+      <td> • not too sweet <br> • could have more guava flavor <br>(less sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/lum6vz"></td>
+    </tr>
+
+    <tr>
+      <td>Lychee Green Tea</td>
+      <td>Breaktime Tea</td>
+      <td>4.3</td>
+      <td>$5.99</td>
+      <td>• comes with fruit bits, which are very fun <br>(100% sugar, less ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/mum6vz"></td>
+    </tr>
+
+    <tr>
+      <td>Strawberry Hibiscus Tea</td>
+      <td>7 Leaves</td>
+      <td>4.5</td>
+      <td>$6.89</td>
+      <td>• so expensive for its size <br> • no tart hibiscus undertones <br>• still has a unique taste <br> (100% sugar, no ice)</td>
+    <td><img class="tableimg" src="http://tiny.cc/num6vz"></td>
+    </tr>
+
+    <tr>
+      <td>Butterfly Rose Lychee Fruit Tea</td>
+      <td>Woof's Bar</td></td>
+      <td>4.7</td>
+      <td>$5.65</td>
+      <td>• decent price <br> • so pretty + all aspects are so good <br> (25% sugar, less ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/pum6vz"></td>
+    </tr>
+
+  <tr>
+      <td>White Crystal</td>
+      <td>Teaspoon</td>
+      <td>4.4</td>
+      <td>$6.00</td>
+      <td>• good topping amount (rare!) <br> • would prefer more flavor <br> (50% sugar, less ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/qum6vz"></td>
+    </tr>
+
+  <tr>
+      <td>Milk Tea with Puff Cream</td>
+      <td>Happy Lemon</td>
+      <td>4.2</td>
+      <td>$7.00</td>
+      <td>• puff cream is delicious <br> • pearls were kind of too chewy <br> (50% sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/tum6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Okinawa Fresh Milk</td>
+      <td>Happy Lemon </td>
+      <td>4.5</td>
+      <td>$6.00</td>
+      <td>• 6pm, pearls were still soft <br> (100% sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/sum6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Assam Milk Tea</td>
+      <td>7 Leaves </td>
+      <td>4.2</td>
+      <td>$5.25</td>
+      <td>• standard <br> (less sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/3vm6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Peach Oolong Tea</td>
+      <td>Pink Pink Tea Shoppe</td>
+      <td>4</td>
+      <td>$7.50</td>
+      <td>• horribly expensive <br> • can't really taste the peach <br>(100% sugar</td>
+      <td><img class="tableimg" src="http://tiny.cc/5vm6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Thai Tea</td>
+      <td>Bubble Tea Station Cafe </td>
+      <td>4</td>
+      <td>$5.45</td>
+      <td>• wasn't fully mixed <br> (100% sugar, 100% ice)</td>
+      <td><img class="tableimg" src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81rKhmo2P1r3cX88bP0jhAUNJFSYAsHXVIGRwCAdweMdz-_DMwcUjfzj4tY0n09OvJeSYgRcgjuh8pr6N8O5qfGTn7EI0A=s1600"></td>
+  </tr>
+
+  <tr>
+      <td>Okinawa Milk Tea</td>
+      <td>Breaktime Tea</td>
+      <td>3.9</td>
+      <td>$7.13</td>
+      <td>• so expensive. <br> • very little toppings <br> (no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/8ro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Strawberry Matcha Royale</td>
+      <td>Teaspoon</td>
+      <td>4.4</td>
+      <td>$6.83</td>
+      <td>• very pretty <br> • strawberries elevate the drink <br> (100% sugar, 100% ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/bro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Okinawa Fresh Milk</td>
+      <td>Sweet U</td>
+      <td>3.7</td>
+      <td>$4.50</td>
+      <td>• didn't have much syrup <br> • mostly plain milk <br> (no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/gro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Peach Green Milk Tea</td>
+      <td>Breaktime Tea</td>
+      <td>3.7</td>
+      <td>$6.50</td>
+      <td>• the pearls were very good <br> (less sugar, no ice)</td>
+      <td><img class="tableimg" src="http://tiny.cc/jro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Thai Tea</td>
+      <td>Teaspoon</td>
+      <td>4</td>
+      <td>$5.00</td>
+      <td>• from school fundraiser <br> • not really sweet (??, ??)</td>
+      <td><img class="tableimg" src="http://tiny.cc/oro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Lychee Green Tea </td>
+      <td>R&B Tea</td>
+      <td>2.5</td>
+      <td>$5.95</td>
+      <td>• really cool cup <br> • WAY too sweet and dry aftertaste <br> • no lychee flavor <br> (70% sugar, no ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/qro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Matcha Latte</td>
+      <td>Happy Lemon</td>
+      <td>4.5</td>
+      <td>$6.00</td>
+      <td>• tiramisu salted cheese is delicious !! <br> • amazingly not overly sweet <br> (50% sugar, no ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/uro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Brown Sugar Boba Milk</td>
+      <td>Breaktime Tea</td>
+      <td>4.5</td>
+      <td>$6.50</td>
+      <td>• refreshing but too sweet <br> (100% sugar, 100% ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/wro6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Strawberry Green Tea</td>
+      <td>Happy Lemon</td>
+      <td>3.7</td>
+      <td>$5.25</td>
+      <td>• too sweet to be 50% <br> • still tased nice <br>(50% sugar, 100% ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/2so6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Watermelon Freeze</td>
+      <td>N7 Draft Tea</td>
+      <td>4.7</td>
+      <td>$6.25</td>
+      <td>• fun foam on top <br> • perfect taste and sweetness <br>(75% sugar, no ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/7so6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Passionfruit Jasmine Green Tea</td>
+      <td>Happy Lemon</td>
+      <td>3.3</td>
+      <td>$5.50</td>
+      <td>• atrociously sweet <br> • passionfruit seeds add a nice crunch <br>(50% sugar, 25% ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/9np6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Passion Island</td>
+      <td>Allmytea</td>
+      <td>3.7</td>
+      <td>$5.50</td>
+      <td>• plastic removeable lid <br> • pretty basic flavor <br>(70% sugar, less ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/ynp6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Medley Berry</td>
+      <td>N7 Draft Tea</td>
+      <td>4.6</td>
+      <td>$6.25</td>
+      <td>• perfect sweetness <br> • pretty basic flavor <br>(70% sugar, no ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/1op6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Hong Kong Lemon Tea</td>
+      <td>Breaktime Tea</td>
+      <td>4.3</td>
+      <td>$6.50</td>
+      <td>• gave me lychee jelly instead of strawberry hearts <br> • not overly sweet <br>(less sugar, less ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/2op6vz"></td>
+  </tr>
+
+  <tr>
+      <td>Grape Lychee Green Tea</td>
+      <td>Happy Lemon</td>
+      <td>3.8</td>
+      <td>$6.25</td>
+      <td>• too sweet <br> • grape jello helped balance it <br>(75% sugar, 25% ice) </td>
+      <td><img class="tableimg" src="http://tiny.cc/6op6vz"></td>
+  </tr>
+      
+  </table>
+  </div>
+</body>
+</html>
